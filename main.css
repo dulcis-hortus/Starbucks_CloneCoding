@@ -1,0 +1,214 @@
+:root {
+    --size-header-logo : 75px;
+
+    /* color */
+    --color-black: #000000;
+    --color-dropdown-menu: #2C2A29;
+    --color-header-background: #f5f3eb;
+
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.body__div {
+    font-family: 'nbg', '맑은고딕', HelveticaNeue, DroidSans, sans-serif, Helvetica;
+    line-height: 1;
+    height: 2000px;
+}
+
+#sb-header {
+    height: 120px;
+    position: sticky;
+    top: 0;
+    background: #000000;
+}
+
+#sb-header .header__div {
+    height: 100%;
+    width: 100%;
+    background: var(--color-header-background);
+    display: flex;
+    justify-content: center;
+}
+
+#sb-header .header__div .content {
+    width: 1100px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#sb-header .header__div .content .logo {
+    width: var(--size-header-logo); 
+    height: var(--size-header-logo); 
+    background: url(https://www.starbucks.co.kr/common/img/common/logo.png);
+    background-size: var(--size-header-logo);
+    align-self: center;
+}
+
+#sb-header .header__div .content .all-menu {
+    width: 750px;
+    position: relative;
+}
+
+#sb-header .header__div .content .all-menu .sub-menu ul {
+    display: flex;
+    align-items: center;
+    font-size: 13px;
+    color: #555555;
+    position: absolute;
+    right: 50px; top: 8px;
+    word-spacing: -1px;
+}
+
+#sb-header .header__div .content .all-menu .sub-menu ul li:not(:last-child) {
+    position: relative;
+}
+
+#sb-header .header__div .content .all-menu .sub-menu ul li:not(:last-child) a {
+    padding: 0 17px;
+}
+
+#sb-header .header__div .content .all-menu .sub-menu ul li:nth-child(1)::after,
+#sb-header .header__div .content .all-menu .sub-menu ul li:nth-child(2)::after, 
+#sb-header .header__div .content .all-menu .sub-menu ul li:nth-child(3)::after {
+    content: "";
+    display: inline-block;
+    width: 1px;
+    height: 12px;
+    background: #cccccc;
+    position: absolute;
+    right: 0; bottom: 0;
+}
+
+#sb-header .header__div .content .all-menu .sub-menu ul li a:hover {
+    text-decoration: underline;
+
+}
+
+#sb-header .header__div .content .all-menu .sub-menu .search {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    background: #ffffff top 5px left 4px url(https://image.istarbucks.co.kr/common/img/common/icon_magnifier_black.png) no-repeat;
+    border-radius: 4px;
+    border: 1px solid #cccccc;
+}
+
+
+/* .main-menu 대략적인 레이아웃 구조 */
+#sb-header .header__div .content .all-menu .main-menu ul {
+    display: flex;
+    font-size: 14px;
+    position: absolute;
+    bottom: 40px; right: 0;
+}
+
+#sb-header .header__div .content .all-menu .main-menu > ul > li > a:hover {
+    background: var(--color-dropdown-menu);
+    color: rgb(119, 158, 41);
+}
+
+#sb-header .header__div .content .all-menu .main-menu ul li:nth-child(1) a,
+#sb-header .header__div .content .all-menu .main-menu ul li:nth-child(2) a,
+#sb-header .header__div .content .all-menu .main-menu ul li:nth-child(3) a {
+    padding: 8px 19px 38px;
+}
+
+#sb-header .header__div .content .all-menu .main-menu ul li:nth-child(4) a {
+    padding: 8px 25px 38px;
+}
+
+#sb-header .header__div .content .all-menu .main-menu ul li:nth-child(5) a {
+    padding: 8px 35px 38px;
+}
+
+#sb-header .header__div .content .all-menu .main-menu ul li:nth-child(6) a {
+    padding: 8px 25px 38px;
+}
+
+
+/* .main-menu drop down 메뉴 */
+#sb-header .coffee__wrap-div {
+    height: 555px;
+    position: sticky;
+    top: 120px;
+    background: var(--color-black);
+    /* 추후 JS 작업으로 완성할 부분 */
+    display: none;
+}
+
+#sb-header .coffee__wrap-div .cags {
+    display: flex;
+    justify-content: center;
+    height: 430px;
+    background: var(--color-dropdown-menu);
+}
+
+#sb-header .coffee__wrap-div .cags .cags__contents {
+    display: inline-flex;
+    justify-content: start;
+    flex-wrap: wrap;
+    width: 1100px;
+    /* border: 1px solid wheat; */
+}
+
+#sb-header .coffee__wrap-div .cags .cags__contents ul {
+    width: 220px;
+    height: 150px;
+    margin-bottom: 80px;
+}
+
+#sb-header .coffee__wrap-div .cags .cags__contents ul li {
+    margin: 10px 0;
+    font-size: 12px;   
+    letter-spacing: -1px;
+}
+
+#sb-header .coffee__wrap-div .cags .cags__contents ul li a {
+    color: #9c9c9c;
+}
+
+#sb-header .coffee__wrap-div .cags .cags__contents ul .title {
+    font-size: 14px;
+    font-weight: 600;
+    margin: 25px 0 20px 0;
+}
+
+#sb-header .coffee__wrap-div .cags .cags__contents ul .title a {
+    color: var(--color-header-background);
+}
+
+#sb-header .coffee__wrap-div .bottom-txt {
+    display: flex;
+    justify-content: center;
+}
+
+#sb-header .coffee__wrap-div .bottom-txt ul {
+    width: 1100px;
+    /* text-align: left; */
+    margin-top: 30px;
+}
+
+#sb-header .coffee__wrap-div .bottom-txt ul li {
+    margin-bottom: 10px;
+}
+
+#sb-header .coffee__wrap-div .bottom-txt ul li a {
+    color: #9c9c9c;
+    font-weight: 700;
+}
+
+#sb-header .coffee__wrap-div .bottom-txt ul li p {
+    margin-top: 5px;
+    color: rgb(111, 173, 69);
+    letter-spacing: -1px;
+}
+
+
+#sb-header .coffee__wrap-div.on {
+    display: block;
+}
+
+
