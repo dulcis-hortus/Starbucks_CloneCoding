@@ -2,9 +2,11 @@
     --size-header-logo : 75px;
 
     /* color */
-    --color-black: #000000;
-    --color-dropdown-menu: #2C2A29;
+    --color-black: rgb(17, 17, 17);
+    --color-dropdown-menu: rgb(44, 42, 41);
     --color-header-background: #f5f3eb;
+    --color-font-white: rgb(246, 245, 239);
+    
 
 }
 
@@ -325,6 +327,126 @@ button:hover {
 }
 
 #season-menu .season-menu__contents .more-info:hover {
-    background: rgb(223, 192, 197);
-    color: rgb(106, 59, 150);
+    background: rgb(229, 187, 149);
+    color: rgb(98, 51, 141);
+}
+
+
+/* section id="line-notice" */
+#line-notice {
+    height: 61px;
+    display: flex;
+}
+
+#line-notice .notices {
+    width: 54%;
+    background: var(--color-black);
+    display: flex;
+    justify-content: flex-end;
+}
+
+#line-notice .notices .contents {
+    /* border: 1px solid #ffffff; */
+    width: 640px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* position: relative; */
+}
+
+#line-notice .notices .contents > div {
+    width: 320px;
+    height: 30px;
+    /* border: 1px solid #ffffff; */
+    display: flex;
+    align-items: center;
+}
+
+#line-notice .notices .contents div div {
+    /* border: 1px solid white; */
+    height: 20px;
+    width: 315px;
+    margin-left: 15px;
+    overflow: hidden;
+}
+
+#line-notice .notices .contents div div ul li {
+    height: 20px;
+}
+
+#line-notice .notices .contents div div ul li a {
+    background: var(--color-black);
+    color: var(--color-font-white);
+    height: 20px;
+    font-size: 14px;
+    letter-spacing: -1px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+}
+
+#line-notice .notices .contents .a--button {
+    width: 36px;
+    height: 36px;
+    background: url(https://www.starbucks.co.kr/common/img/common/btn_notice_plus.png) no-repeat;
+    background-size: 35px;
+    margin-right: 17px;
+    /* border: 1px solid wheat; */
+}
+
+#line-notice .promotion {
+    width: 46%;
+    background: rgb(246, 245, 239);
+    display: flex;
+    justify-content: start;
+}
+
+#line-notice .promotion .contents {
+    width: 453px;
+    /* border: 1px solid; */
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+#line-notice .promotion .contents div {
+    cursor: pointer;
+    /* border: 1px solid; */
+    display: flex;
+    align-items: center;
+}
+
+#line-notice .promotion .contents div p {
+    color: transparent;
+    width: 128px;
+    height: 16px;
+    /* border: 1px solid black; */
+    background: url(https://www.starbucks.co.kr/common/img/common/prom_ttl_b.png) no-repeat;
+    background-size: 128px 16px;
+}
+
+#line-notice .promotion .contents .div--button {
+    width: 36px;
+    height: 36px;
+    background: url(https://image.istarbucks.co.kr/common/img/common/btn_prom_down.png) no-repeat;
+    background-size: 35px;
+    margin-left: 70px;
+}
+
+@media screen and (max-width: 1475px) {
+    #line-notice .notices {
+        width: 50%;
+    }
+
+    #line-notice .notices .contents {
+        width: 459px;
+    }
+
+    #line-notice .promotion {
+        width: 50%;
+    }
+
+    #line-notice .promotion .contents {
+        width: 325px;
+    }
 }
