@@ -7,6 +7,8 @@
     --color-header-background: #f5f3eb;
     --color-font-white: rgb(246, 245, 239);
     
+    /* transition */
+    --trans-function: ease-out;
 
 }
 
@@ -18,27 +20,28 @@ a:hover {
 }
 
 .body__div {
+    min-width: 1170px;
     font-family: 'nbg', '맑은고딕', HelveticaNeue, DroidSans, sans-serif, Helvetica;
     line-height: 1;
     height: 2000px;
 }
 
-button {
+.button {
     display: inline-block;
     border: 2px solid #ffffff;
     border-radius: 3px;
-    padding: 8px 25px;
+    padding: 10px 23px;
     background: transparent;
     color: #ffffff;
     font-size: 14px;
     font-weight: 700;
+    transition: .4s var(--trans-function);
 }
 
-button:hover {
+.button:hover {
     text-decoration: underline;
     cursor: pointer;
 }
-
 
 
 /* header */
@@ -323,7 +326,6 @@ button:hover {
 #season-menu .season-menu__contents .more-info {
     position: absolute;
     top: 245px; left: 0;
-    transition: 0.3s ease-out;
 }
 
 #season-menu .season-menu__contents .more-info:hover {
@@ -449,4 +451,129 @@ button:hover {
     #line-notice .promotion .contents {
         width: 325px;
     }
+}
+
+
+/* <section id="promotion__more"> */
+
+#promotion__more {
+    height: 658px;
+    background: rgb(246, 246, 238);
+}
+
+#promotion__more .promotion__more__slider {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+#promotion__more .promotion__more__slider .viewport {
+    display: flex;
+    justify-content: center;
+}
+
+#promotion__more .promotion__more__slider ul {
+    display: flex;
+}
+
+#promotion__more .promotion__more__slider ul li {
+    margin: 40px 5px 0;
+    text-align: center;
+    position: relative;
+    width: 819px;
+    height: 554px;
+    /* border: 1px solid tomato; */
+}
+
+#promotion__more .promotion__more__slider ul li:not(:nth-child(2)) {
+    opacity: 0.4;
+}
+
+#promotion__more .promotion__more__slider .button {
+    border: 2px solid #1b1b1b;
+    color: #555555;
+    padding: 10px 25px;
+    font-weight: 600;
+    position: absolute;
+    left: 345px; bottom: 15px;
+    letter-spacing: -1px;
+}
+
+#promotion__more .promotion__more__slider .button:hover {
+    background: #1b1b1b;
+    color: var(--color-font-white);
+}
+
+#promotion__more .promotion__more__slider .control {
+    width: 100px;
+    height: 30px;
+    border: 1px solid;
+    margin: 0 auto;
+}
+
+.control--arrow {
+    width: 1033px;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-self: center;
+    position: relative;
+    bottom: 330px;
+    z-index: 3;
+}
+
+.control--arrow .left,
+.control--arrow .right {
+    width: 51px;
+    height: 51px;
+    border: 2px solid var(--color-black);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: .4s var(--trans-function);
+}
+
+.control--arrow .left {
+    background: url(https://www.starbucks.co.kr/common/img/common/arrow_left_on.png) no-repeat;
+    background-position: 50% 50%;
+}
+
+.control--arrow .right {
+    background: url(https://www.starbucks.co.kr/common/img/common/arrow_right_on.png) no-repeat;
+    background-position: 50% 50%;
+}
+
+.control--arrow .left:hover,
+.control--arrow .right:hover {
+    background-color: var(--color-font-white);
+}
+
+.control--bar {
+    align-self: center;
+    position: relative;
+    bottom: 40px;
+    z-index: 3;
+    /* border: 1px solid tomato; */
+}
+
+.control--bar span {
+    display: inline-block;
+    width: 17px;
+    height: 12px;
+    background-position: center center;
+    cursor: pointer;
+}
+
+.control--bar span:nth-child(1) {
+    background: url(https://www.starbucks.co.kr/common/img/main/main_prom_play.png) no-repeat;
+    background-position: 3px center;
+}
+
+.control--bar span:nth-child(3) {
+background: url(https://www.starbucks.co.kr/common/img/main/main_prom_on.png) no-repeat;
+}
+
+.control--bar span:nth-child(2),
+.control--bar span:nth-child(4) {
+    background: url(https://www.starbucks.co.kr/common/img/main/main_prom_off.png) no-repeat;
 }
